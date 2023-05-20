@@ -8,6 +8,7 @@
 # Pods
 def external_libs
   pod 'SwiftLint'
+  pod 'ReachabilitySwift'
 end
 
 def module_common
