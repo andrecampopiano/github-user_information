@@ -22,6 +22,7 @@ class GenericCell: UITableViewCell {
         static let titleLabelPaddingRight: CGFloat = 16
         static let subtitleLabelPaddingTop: CGFloat = 4
         static let subtitleLabelPaddingBottom: CGFloat = 8
+        static let avatarViewBoderWidth: CGFloat = 2
     }
     
     // MARK: - Properties
@@ -31,6 +32,9 @@ class GenericCell: UITableViewCell {
     private lazy var avatarView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.cornerRadius = Constants.imageViewSize / 2
+        imageView.borderColor = .black
+        imageView.borderWidth = Constants.avatarViewBoderWidth
         return imageView
     }()
     
@@ -65,10 +69,9 @@ class GenericCell: UITableViewCell {
             self.subtitleLabel.text = text
         }
         
-        viewModel?.imageUrl.bind { [weak self] _ in
-#warning("Implementar helper download de imagens")
+        viewModel?.imageUrl.bind { [weak self] imageUrl in
             guard let self = self else { return }
-            self.avatarView.image = UIImage(named: Constants.imageNameDefault)
+            self.avatarView.downloaded(from: imageUrl ?? String())
         }
     }
     

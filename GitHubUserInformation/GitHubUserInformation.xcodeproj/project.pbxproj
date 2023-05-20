@@ -56,6 +56,7 @@
 		9478D87D2A196C0900A1A72A /* GenericCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D87C2A196C0900A1A72A /* GenericCellViewModel.swift */; };
 		9478D8802A196CB200A1A72A /* GenericCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D87F2A196CB200A1A72A /* GenericCellModel.swift */; };
 		9478D8822A19761000A1A72A /* GenericLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8812A19761000A1A72A /* GenericLoadingCell.swift */; };
+		9478D8862A197FCF00A1A72A /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8852A197FCF00A1A72A /* UIImageView.swift */; };
 		B3B39717CA9AE3B23DA05DD5 /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */; };
 		F12885B89733209C28F1D6AE /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A2E85307132B0820F72648 /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework */; };
 /* End PBXBuildFile section */
@@ -141,6 +142,7 @@
 		9478D87C2A196C0900A1A72A /* GenericCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCellViewModel.swift; sourceTree = "<group>"; };
 		9478D87F2A196CB200A1A72A /* GenericCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCellModel.swift; sourceTree = "<group>"; };
 		9478D8812A19761000A1A72A /* GenericLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericLoadingCell.swift; sourceTree = "<group>"; };
+		9478D8852A197FCF00A1A72A /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		97B4BF2849172EB6534A29FD /* Pods-GitHubUserInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation.release.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation/Pods-GitHubUserInformation.release.xcconfig"; sourceTree = "<group>"; };
 		9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubUserInformation_GitHubUserInformationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3F7F5A0434B88FC2C3C2B4 /* Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation-GitHubUserInformationTests/Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig"; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 		9478D8512A19565F00A1A72A /* UICommon */ = {
 			isa = PBXGroup;
 			children = (
+				9478D8832A197FB400A1A72A /* UIImageView */,
 				9478D8642A19633B00A1A72A /* TableView */,
 				9478D8552A19591600A1A72A /* UIView */,
 				9478D8522A19566A00A1A72A /* Dynamic */,
@@ -764,6 +767,22 @@
 				9478D87F2A196CB200A1A72A /* GenericCellModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9478D8832A197FB400A1A72A /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8842A197FC100A1A72A /* Extension */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		9478D8842A197FC100A1A72A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8852A197FCF00A1A72A /* UIImageView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		F658287E5E5D6928D8C07EC8 /* Frameworks */ = {
@@ -1069,6 +1088,7 @@
 				9478D8542A19568500A1A72A /* Dynamic.swift in Sources */,
 				9478D8312A19385500A1A72A /* Core.swift in Sources */,
 				9478D8802A196CB200A1A72A /* GenericCellModel.swift in Sources */,
+				9478D8862A197FCF00A1A72A /* UIImageView.swift in Sources */,
 				9478D81D2A19316300A1A72A /* NetworkingProviderProtocol.swift in Sources */,
 				9478D8612A19617B00A1A72A /* String.swift in Sources */,
 				9478D8212A1932DE00A1A72A /* ApiProvider.swift in Sources */,
