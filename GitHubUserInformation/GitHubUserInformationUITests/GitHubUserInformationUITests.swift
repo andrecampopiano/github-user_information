@@ -2,7 +2,7 @@
 //  GitHubUserInformationUITests.swift
 //  GitHubUserInformationUITests
 //
-//  Created by Andre Luis Campopiano on 19/05/23.
+//  Created by Andre Luis Campopiano on 20/05/23.
 //
 
 import XCTest

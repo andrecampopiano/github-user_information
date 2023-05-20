@@ -2,10 +2,11 @@
 //  GitHubUserInformationTests.swift
 //  GitHubUserInformationTests
 //
-//  Created by Andre Luis Campopiano on 19/05/23.
+//  Created by Andre Luis Campopiano on 20/05/23.
 //
 
 import XCTest
+@testable import GitHubUserInformation
 
 final class GitHubUserInformationTests: XCTestCase {
 
@@ -27,7 +28,7 @@ final class GitHubUserInformationTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
