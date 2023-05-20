@@ -21,6 +21,7 @@
 		9478D8022A19271100A1A72A /* InfoPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8012A19271100A1A72A /* InfoPList.swift */; };
 		9478D8062A1928D100A1A72A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8052A1928D100A1A72A /* Environment.swift */; };
 		9478D8152A192EA900A1A72A /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8142A192EA900A1A72A /* HttpResponseStatus.swift */; };
+		9478D8182A192FF300A1A72A /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8172A192FF300A1A72A /* ResponseObject.swift */; };
 		B3B39717CA9AE3B23DA05DD5 /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */; };
 		F12885B89733209C28F1D6AE /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A2E85307132B0820F72648 /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		9478D8012A19271100A1A72A /* InfoPList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPList.swift; sourceTree = "<group>"; };
 		9478D8052A1928D100A1A72A /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		9478D8142A192EA900A1A72A /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
+		9478D8172A192FF300A1A72A /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		97B4BF2849172EB6534A29FD /* Pods-GitHubUserInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation.release.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation/Pods-GitHubUserInformation.release.xcconfig"; sourceTree = "<group>"; };
 		9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubUserInformation_GitHubUserInformationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -324,6 +326,7 @@
 		9478D8122A192E8100A1A72A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				9478D8162A192FDC00A1A72A /* Response */,
 				9478D8132A192E9E00A1A72A /* Enum */,
 			);
 			path = Networking;
@@ -335,6 +338,14 @@
 				9478D8142A192EA900A1A72A /* HttpResponseStatus.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		9478D8162A192FDC00A1A72A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8172A192FF300A1A72A /* ResponseObject.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		F658287E5E5D6928D8C07EC8 /* Frameworks */ = {
@@ -569,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9478D8022A19271100A1A72A /* InfoPList.swift in Sources */,
+				9478D8182A192FF300A1A72A /* ResponseObject.swift in Sources */,
 				94021A692A19068000081271 /* AppDelegate.swift in Sources */,
 				94021AA32A190AC400081271 /* UserResponse.swift in Sources */,
 				9478D8062A1928D100A1A72A /* Environment.swift in Sources */,
