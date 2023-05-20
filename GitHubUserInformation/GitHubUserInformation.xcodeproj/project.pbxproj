@@ -38,6 +38,12 @@
 		9478D83B2A1947CD00A1A72A /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D83A2A1947CD00A1A72A /* BaseManager.swift */; };
 		9478D83E2A19482400A1A72A /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D83D2A19482400A1A72A /* AsyncOperation.swift */; };
 		9478D8402A19485800A1A72A /* NetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D83F2A19485700A1A72A /* NetworkingOperation.swift */; };
+		9478D8442A194D6400A1A72A /* UserListGetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8432A194D6400A1A72A /* UserListGetOperation.swift */; };
+		9478D8472A194E4300A1A72A /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8462A194E4300A1A72A /* HomeBusiness.swift */; };
+		9478D84A2A1950D300A1A72A /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8492A1950D300A1A72A /* ApplicationConstants.swift */; };
+		9478D84D2A19522300A1A72A /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D84C2A19522300A1A72A /* HomeManager.swift */; };
+		9478D8502A19539E00A1A72A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D84F2A19539E00A1A72A /* HomeViewModel.swift */; };
+		9478D8542A19568500A1A72A /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8532A19568500A1A72A /* Dynamic.swift */; };
 		B3B39717CA9AE3B23DA05DD5 /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */; };
 		F12885B89733209C28F1D6AE /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A2E85307132B0820F72648 /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +111,12 @@
 		9478D83A2A1947CD00A1A72A /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
 		9478D83D2A19482400A1A72A /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		9478D83F2A19485700A1A72A /* NetworkingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingOperation.swift; sourceTree = "<group>"; };
+		9478D8432A194D6400A1A72A /* UserListGetOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListGetOperation.swift; sourceTree = "<group>"; };
+		9478D8462A194E4300A1A72A /* HomeBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusiness.swift; sourceTree = "<group>"; };
+		9478D8492A1950D300A1A72A /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
+		9478D84C2A19522300A1A72A /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		9478D84F2A19539E00A1A72A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9478D8532A19568500A1A72A /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		97B4BF2849172EB6534A29FD /* Pods-GitHubUserInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation.release.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation/Pods-GitHubUserInformation.release.xcconfig"; sourceTree = "<group>"; };
 		9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubUserInformation_GitHubUserInformationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3F7F5A0434B88FC2C3C2B4 /* Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation-GitHubUserInformationTests/Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig"; sourceTree = "<group>"; };
@@ -210,8 +222,8 @@
 		94021A982A19069100081271 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9478D7F52A1924B200A1A72A /* Infrastructure */,
 				94021A9B2A190A6000081271 /* Feature */,
+				9478D7F52A1924B200A1A72A /* Infrastructure */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -263,6 +275,8 @@
 		94021A9E2A190A7C00081271 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				9478D84E2A19538B00A1A72A /* ViewModel */,
+				9478D8452A194E1E00A1A72A /* Business */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -270,6 +284,8 @@
 		94021A9F2A190A8200081271 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				9478D84B2A19521600A1A72A /* Manager */,
+				9478D8412A194CE900A1A72A /* Operation */,
 				94021AA02A190A8900081271 /* Model */,
 			);
 			path = Data;
@@ -302,6 +318,7 @@
 		9478D7F52A1924B200A1A72A /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				9478D8482A1950BA00A1A72A /* Constants */,
 				9478D7F62A1924CC00A1A72A /* Core */,
 			);
 			path = Infrastructure;
@@ -310,6 +327,7 @@
 		9478D7F62A1924CC00A1A72A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9478D8512A19565F00A1A72A /* UICommon */,
 				9478D83C2A1947FA00A1A72A /* Operation */,
 				9478D8392A1947BB00A1A72A /* Manager */,
 				9478D82A2A19378900A1A72A /* Infrastructure */,
@@ -478,6 +496,62 @@
 				9478D83F2A19485700A1A72A /* NetworkingOperation.swift */,
 			);
 			path = Operation;
+			sourceTree = "<group>";
+		};
+		9478D8412A194CE900A1A72A /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8432A194D6400A1A72A /* UserListGetOperation.swift */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		9478D8452A194E1E00A1A72A /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8462A194E4300A1A72A /* HomeBusiness.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9478D8482A1950BA00A1A72A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8492A1950D300A1A72A /* ApplicationConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		9478D84B2A19521600A1A72A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9478D84C2A19522300A1A72A /* HomeManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		9478D84E2A19538B00A1A72A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9478D84F2A19539E00A1A72A /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9478D8512A19565F00A1A72A /* UICommon */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8522A19566A00A1A72A /* Dynamic */,
+			);
+			path = UICommon;
+			sourceTree = "<group>";
+		};
+		9478D8522A19566A00A1A72A /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8532A19568500A1A72A /* Dynamic.swift */,
+			);
+			path = Dynamic;
 			sourceTree = "<group>";
 		};
 		F658287E5E5D6928D8C07EC8 /* Frameworks */ = {
@@ -768,12 +842,18 @@
 				9478D8022A19271100A1A72A /* InfoPList.swift in Sources */,
 				9478D81B2A19313C00A1A72A /* HttpRequestType.swift in Sources */,
 				9478D8332A1938B200A1A72A /* FileRepresentation.swift in Sources */,
+				9478D84D2A19522300A1A72A /* HomeManager.swift in Sources */,
+				9478D8442A194D6400A1A72A /* UserListGetOperation.swift in Sources */,
 				9478D8182A192FF300A1A72A /* ResponseObject.swift in Sources */,
 				9478D83B2A1947CD00A1A72A /* BaseManager.swift in Sources */,
+				9478D84A2A1950D300A1A72A /* ApplicationConstants.swift in Sources */,
 				94021A692A19068000081271 /* AppDelegate.swift in Sources */,
+				9478D8472A194E4300A1A72A /* HomeBusiness.swift in Sources */,
+				9478D8542A19568500A1A72A /* Dynamic.swift in Sources */,
 				9478D8312A19385500A1A72A /* Core.swift in Sources */,
 				9478D81D2A19316300A1A72A /* NetworkingProviderProtocol.swift in Sources */,
 				9478D8212A1932DE00A1A72A /* ApiProvider.swift in Sources */,
+				9478D8502A19539E00A1A72A /* HomeViewModel.swift in Sources */,
 				94021AA32A190AC400081271 /* UserResponse.swift in Sources */,
 				9478D8352A1939D900A1A72A /* NetworkingSessionDelegate.swift in Sources */,
 				9478D8402A19485800A1A72A /* NetworkingOperation.swift in Sources */,
