@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  GitHubUserInformation
+
+  Created by Andre Luis Campopiano on 20/05/23.
+  
+*/
+
+// MARK: - HomeView
+"homeViewControllerNavitationTitle" = "Lista de Usuários";
+
