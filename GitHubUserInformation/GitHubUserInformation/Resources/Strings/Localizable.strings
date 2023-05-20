@@ -9,3 +9,9 @@
 // MARK: - HomeView
 "homeViewControllerNavitationTitle" = "Lista de Usuários";
 
+// MARK: - Generic
+
+// MARK: - Generic Loading View
+"loadingViewTitle" = "Carregando";
+"loadingViewSubtitle" = "Estamos carregando suas informações!";
+

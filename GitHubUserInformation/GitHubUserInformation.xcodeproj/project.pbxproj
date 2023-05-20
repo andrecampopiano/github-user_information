@@ -51,6 +51,11 @@
 		9478D8632A19622600A1A72A /* AccessibilityLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9478D8622A19622600A1A72A /* AccessibilityLocalizable.strings */; };
 		9478D8672A19635900A1A72A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8662A19635900A1A72A /* UITableView.swift */; };
 		9478D86C2A1963AF00A1A72A /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D86B2A1963AF00A1A72A /* NSObject.swift */; };
+		9478D86F2A19654E00A1A72A /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D86E2A19654E00A1A72A /* GenericCell.swift */; };
+		9478D87B2A196BCD00A1A72A /* GenericCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D87A2A196BCD00A1A72A /* GenericCellViewModelProtocol.swift */; };
+		9478D87D2A196C0900A1A72A /* GenericCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D87C2A196C0900A1A72A /* GenericCellViewModel.swift */; };
+		9478D8802A196CB200A1A72A /* GenericCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D87F2A196CB200A1A72A /* GenericCellModel.swift */; };
+		9478D8822A19761000A1A72A /* GenericLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8812A19761000A1A72A /* GenericLoadingCell.swift */; };
 		B3B39717CA9AE3B23DA05DD5 /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */; };
 		F12885B89733209C28F1D6AE /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A2E85307132B0820F72648 /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework */; };
 /* End PBXBuildFile section */
@@ -131,6 +136,11 @@
 		9478D8622A19622600A1A72A /* AccessibilityLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = AccessibilityLocalizable.strings; sourceTree = "<group>"; };
 		9478D8662A19635900A1A72A /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		9478D86B2A1963AF00A1A72A /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		9478D86E2A19654E00A1A72A /* GenericCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCell.swift; sourceTree = "<group>"; };
+		9478D87A2A196BCD00A1A72A /* GenericCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		9478D87C2A196C0900A1A72A /* GenericCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCellViewModel.swift; sourceTree = "<group>"; };
+		9478D87F2A196CB200A1A72A /* GenericCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCellModel.swift; sourceTree = "<group>"; };
+		9478D8812A19761000A1A72A /* GenericLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericLoadingCell.swift; sourceTree = "<group>"; };
 		97B4BF2849172EB6534A29FD /* Pods-GitHubUserInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation.release.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation/Pods-GitHubUserInformation.release.xcconfig"; sourceTree = "<group>"; };
 		9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubUserInformation_GitHubUserInformationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3F7F5A0434B88FC2C3C2B4 /* Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation-GitHubUserInformationTests/Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig"; sourceTree = "<group>"; };
@@ -264,6 +274,7 @@
 		94021A9B2A190A6000081271 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				9478D8702A196B4000A1A72A /* Common */,
 				94021A9C2A190A6800081271 /* User */,
 			);
 			path = Feature;
@@ -282,6 +293,7 @@
 		94021A9D2A190A6F00081271 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9478D86D2A19651000A1A72A /* View */,
 				94021AA42A190ACB00081271 /* ViewController */,
 			);
 			path = Presentation;
@@ -655,6 +667,105 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		9478D86D2A19651000A1A72A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9478D8702A196B4000A1A72A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8712A196B5A00A1A72A /* UICommon */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9478D8712A196B5A00A1A72A /* UICommon */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8722A196B6D00A1A72A /* Generics */,
+			);
+			path = UICommon;
+			sourceTree = "<group>";
+		};
+		9478D8722A196B6D00A1A72A /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8732A196B7700A1A72A /* GenericCell */,
+			);
+			path = Generics;
+			sourceTree = "<group>";
+		};
+		9478D8732A196B7700A1A72A /* GenericCell */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8762A196BA100A1A72A /* Data */,
+				9478D8772A196BA600A1A72A /* Domain */,
+				9478D8742A196B8A00A1A72A /* Presentation */,
+			);
+			path = GenericCell;
+			sourceTree = "<group>";
+		};
+		9478D8742A196B8A00A1A72A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8752A196B9300A1A72A /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9478D8752A196B9300A1A72A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9478D86E2A19654E00A1A72A /* GenericCell.swift */,
+				9478D8812A19761000A1A72A /* GenericLoadingCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9478D8762A196BA100A1A72A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9478D87E2A196C5100A1A72A /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9478D8772A196BA600A1A72A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8782A196BB000A1A72A /* ViewModel */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9478D8782A196BB000A1A72A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9478D8792A196BBB00A1A72A /* Protocol */,
+				9478D87C2A196C0900A1A72A /* GenericCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9478D8792A196BBB00A1A72A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9478D87A2A196BCD00A1A72A /* GenericCellViewModelProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9478D87E2A196C5100A1A72A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9478D87F2A196CB200A1A72A /* GenericCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F658287E5E5D6928D8C07EC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -942,8 +1053,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9478D87D2A196C0900A1A72A /* GenericCellViewModel.swift in Sources */,
 				9478D8572A19592D00A1A72A /* UIView.swift in Sources */,
 				9478D8022A19271100A1A72A /* InfoPList.swift in Sources */,
+				9478D86F2A19654E00A1A72A /* GenericCell.swift in Sources */,
 				9478D81B2A19313C00A1A72A /* HttpRequestType.swift in Sources */,
 				9478D8332A1938B200A1A72A /* FileRepresentation.swift in Sources */,
 				9478D84D2A19522300A1A72A /* HomeManager.swift in Sources */,
@@ -955,12 +1068,14 @@
 				9478D8472A194E4300A1A72A /* HomeBusiness.swift in Sources */,
 				9478D8542A19568500A1A72A /* Dynamic.swift in Sources */,
 				9478D8312A19385500A1A72A /* Core.swift in Sources */,
+				9478D8802A196CB200A1A72A /* GenericCellModel.swift in Sources */,
 				9478D81D2A19316300A1A72A /* NetworkingProviderProtocol.swift in Sources */,
 				9478D8612A19617B00A1A72A /* String.swift in Sources */,
 				9478D8212A1932DE00A1A72A /* ApiProvider.swift in Sources */,
 				9478D8502A19539E00A1A72A /* HomeViewModel.swift in Sources */,
 				94021AA32A190AC400081271 /* UserResponse.swift in Sources */,
 				9478D8352A1939D900A1A72A /* NetworkingSessionDelegate.swift in Sources */,
+				9478D87B2A196BCD00A1A72A /* GenericCellViewModelProtocol.swift in Sources */,
 				9478D8402A19485800A1A72A /* NetworkingOperation.swift in Sources */,
 				9478D8292A19364300A1A72A /* HTTPURLResponse.swift in Sources */,
 				9478D86C2A1963AF00A1A72A /* NSObject.swift in Sources */,
@@ -971,6 +1086,7 @@
 				9478D8112A192D9600A1A72A /* ApiProviderProtocol.swift in Sources */,
 				9478D8062A1928D100A1A72A /* Environment.swift in Sources */,
 				9478D8672A19635900A1A72A /* UITableView.swift in Sources */,
+				9478D8822A19761000A1A72A /* GenericLoadingCell.swift in Sources */,
 				9478D82E2A1937AC00A1A72A /* Logger.swift in Sources */,
 				9478D8152A192EA900A1A72A /* HttpResponseStatus.swift in Sources */,
 				9478D8382A19433F00A1A72A /* Reachability.swift in Sources */,

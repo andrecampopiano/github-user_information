@@ -9,6 +9,10 @@ import Foundation
 
 enum LocalizableBundle: String {
     
+    // MARK: - Home View
+    
+    case homeViewControllerNavitationTitle
+    
     // MARK: - Loading View
     case loadingViewTitle
     case loadingViewSubtitle

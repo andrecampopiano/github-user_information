@@ -33,7 +33,7 @@ struct UserResponse: Decodable {
         case updatedAt = "updated_at"
     }
     
-    var id: Int
+    var id: Int?
     var login: String?
     var avatarUrl: String?
     var url: String?
@@ -49,7 +49,7 @@ struct UserResponse: Decodable {
     var eventsUrl: String?
     var receivedEventsUrl: String?
     var type: String?
-    var siteAdmin: String?
+    var siteAdmin: Bool?
     var name: String?
     var company: String?
     var blog: String?
