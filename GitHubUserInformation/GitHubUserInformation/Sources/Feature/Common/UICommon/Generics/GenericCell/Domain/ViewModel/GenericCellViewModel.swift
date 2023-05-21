@@ -12,13 +12,9 @@ class GenericCellViewModel: GenericCellViewModelProtocol {
     var subtitle = Dynamic<String?>(nil)
     var imageUrl = Dynamic<String?>(nil)
     
-    required init(model: GenericCellModel) {
-        self.title.value = model.title
-        self.subtitle.value = model.subtitle
-        self.imageUrl.value = model.imageUrl
-    }
-    
-    private func setupImage(imageUrl: String?) {
-
+    required init(model: GenericCellModel?) {
+        self.title.value = model?.title
+        self.subtitle.value = model?.subtitle
+        self.imageUrl.value = model?.imageUrl
     }
 }

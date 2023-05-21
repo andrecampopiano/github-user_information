@@ -11,7 +11,6 @@
 		94021A692A19068000081271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94021A682A19068000081271 /* AppDelegate.swift */; };
 		94021A722A19068200081271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94021A712A19068200081271 /* Assets.xcassets */; };
 		94021A752A19068200081271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94021A732A19068200081271 /* LaunchScreen.storyboard */; };
-		94021A802A19068200081271 /* GitHubUserInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94021A7F2A19068200081271 /* GitHubUserInformationTests.swift */; };
 		94021A8A2A19068200081271 /* GitHubUserInformationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94021A892A19068200081271 /* GitHubUserInformationUITests.swift */; };
 		94021A8C2A19068200081271 /* GitHubUserInformationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94021A8B2A19068200081271 /* GitHubUserInformationUITestsLaunchTests.swift */; };
 		94021AA32A190AC400081271 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94021AA22A190AC400081271 /* UserResponse.swift */; };
@@ -62,6 +61,7 @@
 		9478D8972A19AFE000A1A72A /* XCTestExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8962A19AFE000A1A72A /* XCTestExtensionView.swift */; };
 		9478D8992A19B07900A1A72A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8982A19B07900A1A72A /* UIImage.swift */; };
 		9478D89C2A19B11800A1A72A /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D89B2A19B11800A1A72A /* Elements.swift */; };
+		9478D89E2A19C17600A1A72A /* GenericCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D89D2A19C17600A1A72A /* GenericCellTests.swift */; };
 		B3B39717CA9AE3B23DA05DD5 /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */; };
 		F12885B89733209C28F1D6AE /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A2E85307132B0820F72648 /* Pods_GitHubUserInformation_GitHubUserInformationTests.framework */; };
 /* End PBXBuildFile section */
@@ -101,7 +101,6 @@
 		94021A742A19068200081271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94021A762A19068200081271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94021A7B2A19068200081271 /* GitHubUserInformationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubUserInformationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94021A7F2A19068200081271 /* GitHubUserInformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserInformationTests.swift; sourceTree = "<group>"; };
 		94021A852A19068200081271 /* GitHubUserInformationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubUserInformationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94021A892A19068200081271 /* GitHubUserInformationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserInformationUITests.swift; sourceTree = "<group>"; };
 		94021A8B2A19068200081271 /* GitHubUserInformationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserInformationUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -153,6 +152,7 @@
 		9478D8962A19AFE000A1A72A /* XCTestExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtensionView.swift; sourceTree = "<group>"; };
 		9478D8982A19B07900A1A72A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		9478D89B2A19B11800A1A72A /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		9478D89D2A19C17600A1A72A /* GenericCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCellTests.swift; sourceTree = "<group>"; };
 		97B4BF2849172EB6534A29FD /* Pods-GitHubUserInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation.release.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation/Pods-GitHubUserInformation.release.xcconfig"; sourceTree = "<group>"; };
 		9836A1FC31C560DD28AEC1EE /* Pods_GitHubUserInformation_GitHubUserInformationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubUserInformation_GitHubUserInformationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3F7F5A0434B88FC2C3C2B4 /* Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig"; path = "Target Support Files/Pods-GitHubUserInformation-GitHubUserInformationTests/Pods-GitHubUserInformation-GitHubUserInformationTests.develop.xcconfig"; sourceTree = "<group>"; };
@@ -242,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				9478D8872A19AB6F00A1A72A /* Sources */,
-				94021A7F2A19068200081271 /* GitHubUserInformationTests.swift */,
 			);
 			path = GitHubUserInformationTests;
 			sourceTree = "<group>";
@@ -849,6 +848,7 @@
 			isa = PBXGroup;
 			children = (
 				9478D88E2A19AD2C00A1A72A /* GenericLoadingCellTests.swift */,
+				9478D89D2A19C17600A1A72A /* GenericCellTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1226,8 +1226,8 @@
 			files = (
 				9478D88F2A19AD2C00A1A72A /* GenericLoadingCellTests.swift in Sources */,
 				9478D8992A19B07900A1A72A /* UIImage.swift in Sources */,
+				9478D89E2A19C17600A1A72A /* GenericCellTests.swift in Sources */,
 				9478D89C2A19B11800A1A72A /* Elements.swift in Sources */,
-				94021A802A19068200081271 /* GitHubUserInformationTests.swift in Sources */,
 				9478D8942A19ADE700A1A72A /* BaseXCTest.swift in Sources */,
 				9478D8972A19AFE000A1A72A /* XCTestExtensionView.swift in Sources */,
 			);

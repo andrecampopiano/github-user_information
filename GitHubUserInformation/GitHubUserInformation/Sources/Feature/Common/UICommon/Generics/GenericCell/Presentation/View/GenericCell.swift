@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum GenericCellIdentifiers: String {
+    case avatarView = "genericCell_avatarView_id"
+    case titleLabel = "genericCell_titleLabel_id"
+    case subtitleLabel = "genericCell_subtitleLabel_id"
+}
+
 class GenericCell: UITableViewCell {
     
     // MARK: - Constants
@@ -35,20 +41,33 @@ class GenericCell: UITableViewCell {
         imageView.cornerRadius = Constants.imageViewSize / 2
         imageView.borderColor = .black
         imageView.borderWidth = Constants.avatarViewBoderWidth
+        imageView.image = UIImage(named: Constants.imageNameDefault)
+        imageView.accessibilityIdentifier = GenericCellIdentifiers.avatarView.rawValue
         return imageView
     }()
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.accessibilityIdentifier = GenericCellIdentifiers.titleLabel.rawValue
         return label
     }()
     
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.accessibilityIdentifier = GenericCellIdentifiers.subtitleLabel.rawValue
         return label
     }()
+    
+    // MARK: - Instantiate
+    
+    static func instantiate() -> GenericCell {
+        let view = GenericCell()
+        return view
+    }
+    
+    // MARK: - Public Methods
     
     func setup(viewModel: GenericCellViewModelProtocol) {
         self.viewModel = viewModel
@@ -76,6 +95,7 @@ class GenericCell: UITableViewCell {
     }
     
     private func setupLayout() {
+        backgroundColor = .white
         setupImageViewLayout()
         setupTitleLabel()
         setupSubtitleLabel()

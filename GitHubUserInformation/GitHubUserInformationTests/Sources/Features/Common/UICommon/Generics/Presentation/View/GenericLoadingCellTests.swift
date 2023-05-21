@@ -50,6 +50,8 @@ class GenericLoadingCellTests: BaseXCTest, Elements {
         XCTAssertEqual(descriptionLabel?.text, "We are uploading your information!")
     }
     
+    // MARK: - Private Methods
+    
     private func makeSut(title: String? = nil, description: String? = nil) {
         sut = GenericLoadingCell.instantiate()
         sut?.setup(title: title, description: description)

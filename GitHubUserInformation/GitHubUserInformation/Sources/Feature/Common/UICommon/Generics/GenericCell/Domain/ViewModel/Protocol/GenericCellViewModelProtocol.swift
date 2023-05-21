@@ -12,5 +12,5 @@ protocol GenericCellViewModelProtocol {
     var subtitle: Dynamic<String?> { get }
     var imageUrl: Dynamic<String?> { get }
     
-    init(model: GenericCellModel)
+    init(model: GenericCellModel?)
 }

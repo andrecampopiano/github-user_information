@@ -44,7 +44,7 @@ open class BaseXCTest: FBSnapshotTestCase {
         }
         
         folderName = customFolderName(file: file)
-        let customIdentifier = "\(identifier)_\("iPhone8".replacingOccurrences(of: " ", with: ""))"
+        let customIdentifier = "\(identifier)_\("iPhone14".replacingOccurrences(of: " ", with: ""))"
         FBSnapshotVerifyView(UIImageView(image: image), identifier: customIdentifier, suffixes: NSOrderedSet(array: ["_64"]), perPixelTolerance: 0.005, overallTolerance: tolerance, file: file, line: line)
     }
     
