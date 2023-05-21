@@ -21,6 +21,7 @@ def module_pods
 end
 
 def test_libs
+  pod 'iOSSnapshotTestCase'
   module_common
 end
 

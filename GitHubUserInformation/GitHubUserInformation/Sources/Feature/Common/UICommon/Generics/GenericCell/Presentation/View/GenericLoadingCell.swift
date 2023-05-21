@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum GenericLoadingCellIdentifiers: String {
+    case titleLabel = "genericLoadingCell_titleLabel_id"
+    case descriptionLabel = "genericLoadingCell_descriptionLabel_id"
+    case activityView = "genericLoadingCell_activityView_id"
+}
+
 class GenericLoadingCell: UITableViewCell {
     
     // MARK: - Constants
@@ -28,6 +34,7 @@ class GenericLoadingCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = Constants.titleText
+        label.accessibilityIdentifier = GenericLoadingCellIdentifiers.titleLabel.rawValue
         label.textAlignment = .center
         return label
     }()
@@ -36,15 +43,26 @@ class GenericLoadingCell: UITableViewCell {
         let view = UIActivityIndicatorView()
         view.transform = CGAffineTransform(scaleX: Constants.activityIndicatorScale, y: Constants.activityIndicatorScale)
         view.startAnimating()
+        view.accessibilityIdentifier = GenericLoadingCellIdentifiers.activityView.rawValue
         return view
     }()
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = Constants.descriptionText
+        label.accessibilityIdentifier = GenericLoadingCellIdentifiers.descriptionLabel.rawValue
         label.textAlignment = .center
         return label
     }()
+    
+    // MARK: - Instantiate
+    
+    static func instantiate() -> GenericLoadingCell {
+        let view = GenericLoadingCell()
+        return view
+    }
+    
+    // MARK: - Public Methods
     
     func setup(title: String? = nil, description: String? = nil) {
         if let title = title {
