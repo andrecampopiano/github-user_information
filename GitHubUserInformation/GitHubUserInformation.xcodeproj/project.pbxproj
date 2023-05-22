@@ -32,6 +32,8 @@
 		9448C8DF2A1BC17D00069E25 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8DE2A1BC17D00069E25 /* UIFont.swift */; };
 		9448C8E12A1BC1A100069E25 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8E02A1BC1A100069E25 /* FontSize.swift */; };
 		9448C8E32A1BC7DC00069E25 /* GenericErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8E22A1BC7DC00069E25 /* GenericErrorTests.swift */; };
+		9448C8E62A1BECE900069E25 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8E52A1BECE900069E25 /* HomeViewModelTests.swift */; };
+		9448C8E82A1C04B200069E25 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8E72A1C04B200069E25 /* main.swift */; };
 		9478D7FA2A19251500A1A72A /* BundleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D7F92A19251500A1A72A /* BundleData.swift */; };
 		9478D7FD2A1925A900A1A72A /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D7FC2A1925A900A1A72A /* BaseError.swift */; };
 		9478D8022A19271100A1A72A /* InfoPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8012A19271100A1A72A /* InfoPList.swift */; };
@@ -140,6 +142,8 @@
 		9448C8DE2A1BC17D00069E25 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		9448C8E02A1BC1A100069E25 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		9448C8E22A1BC7DC00069E25 /* GenericErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorTests.swift; sourceTree = "<group>"; };
+		9448C8E52A1BECE900069E25 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		9448C8E72A1C04B200069E25 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9478D7F92A19251500A1A72A /* BundleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleData.swift; sourceTree = "<group>"; };
 		9478D7FC2A1925A900A1A72A /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		9478D8012A19271100A1A72A /* InfoPList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPList.swift; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 				94021A732A19068200081271 /* LaunchScreen.storyboard */,
 				94021A762A19068200081271 /* Info.plist */,
 				94021A682A19068000081271 /* AppDelegate.swift */,
+				9448C8E72A1C04B200069E25 /* main.swift */,
 			);
 			path = SuportFiles;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 		9448C8AF2A19DA8900069E25 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				9448C8E42A1BECD600069E25 /* Domain */,
 				9448C8B02A19DA9D00069E25 /* Presentation */,
 			);
 			path = User;
@@ -548,6 +554,14 @@
 				9448C8DE2A1BC17D00069E25 /* UIFont.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9448C8E42A1BECD600069E25 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9448C8E52A1BECE900069E25 /* HomeViewModelTests.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		9478D7F52A1924B200A1A72A /* Infrastructure */ = {
@@ -1388,6 +1402,7 @@
 				9478D83B2A1947CD00A1A72A /* BaseManager.swift in Sources */,
 				9478D84A2A1950D300A1A72A /* ApplicationConstants.swift in Sources */,
 				94021A692A19068000081271 /* AppDelegate.swift in Sources */,
+				9448C8E82A1C04B200069E25 /* main.swift in Sources */,
 				9478D8472A194E4300A1A72A /* HomeBusiness.swift in Sources */,
 				9478D8542A19568500A1A72A /* Dynamic.swift in Sources */,
 				9448C8C22A1BA2C300069E25 /* GenericErrorCell.swift in Sources */,
@@ -1432,6 +1447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9448C8E62A1BECE900069E25 /* HomeViewModelTests.swift in Sources */,
 				9478D88F2A19AD2C00A1A72A /* GenericLoadingCellTests.swift in Sources */,
 				9448C8BC2A1B9BA000069E25 /* Bundle.swift in Sources */,
 				9448C8E32A1BC7DC00069E25 /* GenericErrorTests.swift in Sources */,
