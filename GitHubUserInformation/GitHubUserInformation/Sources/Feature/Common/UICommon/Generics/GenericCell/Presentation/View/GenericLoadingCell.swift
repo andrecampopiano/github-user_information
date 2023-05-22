@@ -42,7 +42,6 @@ class GenericLoadingCell: UITableViewCell {
     private lazy var activityView: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
         view.transform = CGAffineTransform(scaleX: Constants.activityIndicatorScale, y: Constants.activityIndicatorScale)
-        view.startAnimating()
         view.accessibilityIdentifier = GenericLoadingCellIdentifiers.activityView.rawValue
         return view
     }()
@@ -71,6 +70,7 @@ class GenericLoadingCell: UITableViewCell {
         if let description = description {
             self.descriptionLabel.text = description
         }
+        activityView.startAnimating()
         setupLayout()
     }
     

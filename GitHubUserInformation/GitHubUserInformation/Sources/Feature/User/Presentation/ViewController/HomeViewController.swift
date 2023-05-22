@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum HomeViewControllerIdentifiers: String {
+    case tableView = "homeViewController_tableView_id"
+}
+
 final class HomeViewController: UIViewController {
     
     // MARK: - Properties
@@ -19,6 +23,7 @@ final class HomeViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.registerCell(GenericCell.self)
         tableView.registerCell(GenericLoadingCell.self)
+        tableView.accessibilityIdentifier = HomeViewControllerIdentifiers.tableView.rawValue
         return tableView
     }()
     

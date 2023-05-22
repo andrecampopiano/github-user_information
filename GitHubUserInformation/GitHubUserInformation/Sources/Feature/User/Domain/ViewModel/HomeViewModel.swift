@@ -18,8 +18,6 @@ protocol HomeViewModelProtocol {
     var model: [UserResponse]? { get }
     var status: Dynamic<StatusApi?> { get }
     
-    init(manager: HomeManagerProtocol?)
-    
     func fetchUserList()
 }
 
