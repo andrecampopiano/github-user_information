@@ -35,8 +35,7 @@ enum Colors: String {
     case primaryLightBlue
     case primarySkyBlue
     
-    public var color: UIColor {
+    var color: UIColor {
         UIColor(named: rawValue, in: .main, compatibleWith: .none) ?? .white
     }
-    
 }

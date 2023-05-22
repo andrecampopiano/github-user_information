@@ -40,6 +40,8 @@ class GenericCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.font = UIFont(name: .bold, size: .big)
+        label.textColor = .neutralBlack
         label.accessibilityIdentifier = GenericCellIdentifiers.titleLabel.rawValue
         return label
     }()
@@ -47,6 +49,8 @@ class GenericCell: UITableViewCell {
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.font = UIFont(name: .regular, size: .small)
+        label.textColor = .neutralDarkGrey
         label.accessibilityIdentifier = GenericCellIdentifiers.subtitleLabel.rawValue
         return label
     }()
@@ -90,7 +94,7 @@ class GenericCell: UITableViewCell {
     }
     
     private func setupLayout() {
-        backgroundColor = .white
+        backgroundColor = .neutralWhite
         setupImageViewLayout()
         setupTitleLabel()
         setupSubtitleLabel()

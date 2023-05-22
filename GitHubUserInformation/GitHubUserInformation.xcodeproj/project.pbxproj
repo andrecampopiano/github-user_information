@@ -28,6 +28,9 @@
 		9448C8D42A1BB9A400069E25 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8D32A1BB9A400069E25 /* Size.swift */; };
 		9448C8D62A1BB9CF00069E25 /* MarginSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8D52A1BB9CF00069E25 /* MarginSize.swift */; };
 		9448C8D82A1BB9F600069E25 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8D72A1BB9F600069E25 /* CGFloat.swift */; };
+		9448C8DD2A1BBD3A00069E25 /* FontStyleAndName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8DC2A1BBD3A00069E25 /* FontStyleAndName.swift */; };
+		9448C8DF2A1BC17D00069E25 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8DE2A1BC17D00069E25 /* UIFont.swift */; };
+		9448C8E12A1BC1A100069E25 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448C8E02A1BC1A100069E25 /* FontSize.swift */; };
 		9478D7FA2A19251500A1A72A /* BundleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D7F92A19251500A1A72A /* BundleData.swift */; };
 		9478D7FD2A1925A900A1A72A /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D7FC2A1925A900A1A72A /* BaseError.swift */; };
 		9478D8022A19271100A1A72A /* InfoPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9478D8012A19271100A1A72A /* InfoPList.swift */; };
@@ -132,6 +135,9 @@
 		9448C8D32A1BB9A400069E25 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		9448C8D52A1BB9CF00069E25 /* MarginSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginSize.swift; sourceTree = "<group>"; };
 		9448C8D72A1BB9F600069E25 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		9448C8DC2A1BBD3A00069E25 /* FontStyleAndName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyleAndName.swift; sourceTree = "<group>"; };
+		9448C8DE2A1BC17D00069E25 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		9448C8E02A1BC1A100069E25 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		9478D7F92A19251500A1A72A /* BundleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleData.swift; sourceTree = "<group>"; };
 		9478D7FC2A1925A900A1A72A /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		9478D8012A19271100A1A72A /* InfoPList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPList.swift; sourceTree = "<group>"; };
@@ -433,6 +439,7 @@
 		9448C8C32A1BB0C800069E25 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9448C8D92A1BBD0400069E25 /* UIFont */,
 				9448C8D02A1BB96700069E25 /* CGFloat */,
 				9448C8C42A1BB0DC00069E25 /* Colors */,
 			);
@@ -511,6 +518,32 @@
 			isa = PBXGroup;
 			children = (
 				9448C8D72A1BB9F600069E25 /* CGFloat.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9448C8D92A1BBD0400069E25 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				9448C8DB2A1BBD1600069E25 /* Extension */,
+				9448C8DA2A1BBD1000069E25 /* Enum */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		9448C8DA2A1BBD1000069E25 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9448C8DC2A1BBD3A00069E25 /* FontStyleAndName.swift */,
+				9448C8E02A1BC1A100069E25 /* FontSize.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		9448C8DB2A1BBD1600069E25 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9448C8DE2A1BC17D00069E25 /* UIFont.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1356,6 +1389,7 @@
 				9478D8542A19568500A1A72A /* Dynamic.swift in Sources */,
 				9448C8C22A1BA2C300069E25 /* GenericErrorCell.swift in Sources */,
 				9478D8312A19385500A1A72A /* Core.swift in Sources */,
+				9448C8DF2A1BC17D00069E25 /* UIFont.swift in Sources */,
 				9478D8802A196CB200A1A72A /* GenericCellModel.swift in Sources */,
 				9478D8862A197FCF00A1A72A /* UIImageView.swift in Sources */,
 				9478D81D2A19316300A1A72A /* NetworkingProviderProtocol.swift in Sources */,
@@ -1367,6 +1401,7 @@
 				9478D8352A1939D900A1A72A /* NetworkingSessionDelegate.swift in Sources */,
 				9478D87B2A196BCD00A1A72A /* GenericCellViewModelProtocol.swift in Sources */,
 				9478D8402A19485800A1A72A /* NetworkingOperation.swift in Sources */,
+				9448C8DD2A1BBD3A00069E25 /* FontStyleAndName.swift in Sources */,
 				9478D8292A19364300A1A72A /* HTTPURLResponse.swift in Sources */,
 				9478D86C2A1963AF00A1A72A /* NSObject.swift in Sources */,
 				9448C8D42A1BB9A400069E25 /* Size.swift in Sources */,
@@ -1376,6 +1411,7 @@
 				9478D85D2A1960F100A1A72A /* LocalizableBundle.swift in Sources */,
 				9478D8112A192D9600A1A72A /* ApiProviderProtocol.swift in Sources */,
 				9478D8062A1928D100A1A72A /* Environment.swift in Sources */,
+				9448C8E12A1BC1A100069E25 /* FontSize.swift in Sources */,
 				9478D8672A19635900A1A72A /* UITableView.swift in Sources */,
 				9478D8822A19761000A1A72A /* GenericLoadingCell.swift in Sources */,
 				9478D82E2A1937AC00A1A72A /* Logger.swift in Sources */,

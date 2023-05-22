@@ -30,6 +30,8 @@ class GenericLoadingCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = Constants.titleText
+        label.textColor = .neutralBlack
+        label.font = UIFont(name: .condensedBlack, size: .extraBig)
         label.accessibilityIdentifier = GenericLoadingCellIdentifiers.titleLabel.rawValue
         label.textAlignment = .center
         return label
@@ -45,6 +47,8 @@ class GenericLoadingCell: UITableViewCell {
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = Constants.descriptionText
+        label.textColor = .neutralDarkGrey
+        label.font = UIFont(name: .condensedBlack, size: .extraBig)
         label.accessibilityIdentifier = GenericLoadingCellIdentifiers.descriptionLabel.rawValue
         label.textAlignment = .center
         return label
@@ -73,7 +77,7 @@ class GenericLoadingCell: UITableViewCell {
     // MARK: - Private Methods
     
     private func setupLayout() {
-        backgroundColor = .white
+        backgroundColor = .neutralWhite
         setupTitleLabelLayout()
         setupActivityViewLayout()
         setupDescriptioLabelLayout()
