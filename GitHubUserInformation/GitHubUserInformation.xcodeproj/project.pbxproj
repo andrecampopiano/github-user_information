@@ -290,7 +290,6 @@
 			children = (
 				9448C8CB2A1BB22100069E25 /* Assets */,
 				9478D8582A19601900A1A72A /* Strings */,
-				94021A712A19068200081271 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -461,6 +460,7 @@
 		9448C8CB2A1BB22100069E25 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9448C8CF2A1BB2EC00069E25 /* Images */,
 				9448C8CC2A1BB22A00069E25 /* Colors */,
 			);
 			path = Assets;
@@ -472,6 +472,14 @@
 				9448C8CD2A1BB25400069E25 /* Colors.xcassets */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		9448C8CF2A1BB2EC00069E25 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				94021A712A19068200081271 /* Assets.xcassets */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		9478D7F52A1924B200A1A72A /* Infrastructure */ = {
