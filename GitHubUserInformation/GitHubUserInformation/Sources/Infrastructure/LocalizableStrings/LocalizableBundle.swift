@@ -17,6 +17,15 @@ enum LocalizableBundle: String {
     case loadingViewTitle
     case loadingViewSubtitle
     
+    // MARK: - Generic Erro Cell
+    
+    case genericErrorTitle
+    case genericErrorSubtitle
+    
+    // MARK: - Generic Texts
+    
+    case tryAgainButton
+    
     var localize: String {
         return rawValue.localize(bundle: .main)
     }

@@ -15,3 +15,8 @@
 "loadingViewTitle" = "Carregando";
 "loadingViewSubtitle" = "Estamos carregando suas informações!";
 
+"genericErrorTitle" = "Ops! Erro ao carregar";
+"genericErrorSubtitle" = "Estamos passando por uma instabilidade, por favor tente novamente.";
+
+// MARK: - Generic Texts
+"tryAgainButton" = "Tentar Novamente";
