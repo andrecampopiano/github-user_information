@@ -30,6 +30,7 @@ class GenericLoadingCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = Constants.titleText
+        label.numberOfLines = 0
         label.textColor = .neutralBlack
         label.font = UIFont(name: .condensedBlack, size: .extraBig)
         label.accessibilityIdentifier = GenericLoadingCellIdentifiers.titleLabel.rawValue
@@ -47,6 +48,7 @@ class GenericLoadingCell: UITableViewCell {
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = Constants.descriptionText
+        label.numberOfLines = 0
         label.textColor = .neutralDarkGrey
         label.font = UIFont(name: .condensedBlack, size: .extraBig)
         label.accessibilityIdentifier = GenericLoadingCellIdentifiers.descriptionLabel.rawValue
