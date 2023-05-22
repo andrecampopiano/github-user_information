@@ -20,7 +20,7 @@ class GenericCellTests: BaseXCTest, Elements {
 
     // MARK: - Elements
     
-    private var avatarLabel: UIImageView?
+    private var avatarView: UIImageView?
     private var titleLabel: UILabel?
     private var subtitleLabel: UILabel?
     
@@ -42,13 +42,32 @@ class GenericCellTests: BaseXCTest, Elements {
     
     // MARK: - Tests Methods
     
+    func test_assets() {
+        makeViewModel(model: makeModel(title: Constants.title,
+                                       subtitle: Constants.subtitle,
+                                       imageUrl: String()))
+        makeSut()
+        XCTAssertEqual(titleLabel?.text, Constants.title)
+        XCTAssertEqual(subtitleLabel?.text, Constants.subtitle)
+        XCTAssertNotNil(avatarView?.image)
+    }
+    
     func test_snapshot() {
         makeViewModel(model: makeModel(title: Constants.title,
                                        subtitle: Constants.subtitle,
                                        imageUrl: Constants.imageUrl))
         makeSut()
-        sut?.frame = CGRect(x: .zero, y: .zero, width: 320, height: 102)
         verifySnapshotView(delay: 3) {
+            self.sut
+        }
+    }
+    
+    func test_snapshot_with_image_default() {
+        makeViewModel(model: makeModel(title: Constants.title,
+                                       subtitle: Constants.subtitle,
+                                       imageUrl: String()))
+        makeSut()
+        verifySnapshotView(delay: 1) {
             self.sut
         }
     }
@@ -59,6 +78,7 @@ class GenericCellTests: BaseXCTest, Elements {
         sut = GenericCell.instantiate()
         guard let viewModel = viewModel else { return }
         sut?.setup(viewModel: viewModel)
+        sut?.frame = CGRect(x: .zero, y: .zero, width: 320, height: 102)
         setupElements()
     }
     
@@ -73,7 +93,7 @@ class GenericCellTests: BaseXCTest, Elements {
     private func setupElements() {
         titleLabel = findElement(in: sut, andIdentifier: .titleLabel)
         subtitleLabel = findElement(in: sut, andIdentifier: .subtitleLabel)
-        avatarLabel = findElement(in: sut, andIdentifier: .avatarView)
+        avatarView = findElement(in: sut, andIdentifier: .avatarView)
     }
 }
 

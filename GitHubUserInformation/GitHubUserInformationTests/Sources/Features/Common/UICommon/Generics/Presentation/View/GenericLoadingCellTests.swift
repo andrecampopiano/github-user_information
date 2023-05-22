@@ -50,6 +50,22 @@ class GenericLoadingCellTests: BaseXCTest, Elements {
         XCTAssertEqual(descriptionLabel?.text, "We are uploading your information!")
     }
     
+    func test_snapshot_with_default_values() {
+        makeSut()
+        sut?.frame = CGRect(x: .zero, y: .zero, width: 320, height: 300)
+        verifySnapshotView(delay: 2) {
+            self.sut
+        }
+    }
+    
+    func test_snapshot_with_custom_values() {
+        makeSut(title: "Loading", description: "We are uploading your information!")
+        sut?.frame = CGRect(x: .zero, y: .zero, width: 320, height: 300)
+        verifySnapshotView(delay: 2) {
+            self.sut
+        }
+    }
+    
     // MARK: - Private Methods
     
     private func makeSut(title: String? = nil, description: String? = nil) {

@@ -77,6 +77,7 @@ class GenericLoadingCell: UITableViewCell {
     // MARK: - Private Methods
     
     private func setupLayout() {
+        backgroundColor = .white
         setupTitleLabelLayout()
         setupActivityViewLayout()
         setupDescriptioLabelLayout()

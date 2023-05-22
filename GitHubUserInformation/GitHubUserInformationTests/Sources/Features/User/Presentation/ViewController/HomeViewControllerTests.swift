@@ -25,7 +25,6 @@ class HomeViewControllerTests: BaseXCTest, Elements {
     
     override func setUp() {
         super.setUp()
-        recordMode = true
     }
     
     override func tearDown() {
@@ -36,7 +35,7 @@ class HomeViewControllerTests: BaseXCTest, Elements {
     
     // MARK: Tests Methods
     
-    func test_snapshoot_with_loading_view() {
+    func test_snapshot_with_loading_view() {
         makeSut()
         guard let sut = sut else { return }
         viewModel?.status.value = .loading
@@ -45,7 +44,7 @@ class HomeViewControllerTests: BaseXCTest, Elements {
         }
     }
     
-    func test_snapshoot_with_success() {
+    func test_snapshot_with_success() {
         makeSut(fileName: "user_list_success")
         guard let sut = sut else { return }
         verifySnapshotView(delay: 2) {
@@ -53,7 +52,7 @@ class HomeViewControllerTests: BaseXCTest, Elements {
         }
     }
     
-    func test_snapshoot_with_success_and_one_user_in_list() {
+    func test_snapshot_with_success_and_one_user_in_list() {
         makeSut(fileName: "user_list_success_with_one_user")
         guard let sut = sut else { return }
         verifySnapshotView(delay: 2) {
@@ -61,7 +60,7 @@ class HomeViewControllerTests: BaseXCTest, Elements {
         }
     }
     
-    func test_snapshoot_with_success_and_three_user_in_list() {
+    func test_snapshot_with_success_and_three_user_in_list() {
         makeSut(fileName: "user_list_success_with_three_user")
         guard let sut = sut else { return }
         verifySnapshotView(delay: 2) {

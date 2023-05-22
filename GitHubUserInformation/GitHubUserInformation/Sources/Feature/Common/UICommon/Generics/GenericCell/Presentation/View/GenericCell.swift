@@ -41,7 +41,6 @@ class GenericCell: UITableViewCell {
         imageView.cornerRadius = Constants.imageViewSize / 2
         imageView.borderColor = .black
         imageView.borderWidth = Constants.avatarViewBoderWidth
-        imageView.image = UIImage(named: Constants.imageNameDefault)
         imageView.accessibilityIdentifier = GenericCellIdentifiers.avatarView.rawValue
         return imageView
     }()
@@ -90,7 +89,11 @@ class GenericCell: UITableViewCell {
         
         viewModel?.imageUrl.bind { [weak self] imageUrl in
             guard let self = self else { return }
-            self.avatarView.downloaded(from: imageUrl ?? String())
+            if let imageUrl = imageUrl, !imageUrl.isEmpty {
+                self.avatarView.downloaded(from: imageUrl)
+                return
+            }
+            self.avatarView.image = UIImage(named: Constants.imageNameDefault)
         }
     }
     

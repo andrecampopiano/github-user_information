@@ -15,6 +15,10 @@ class GenericCellViewModel: GenericCellViewModelProtocol {
     required init(model: GenericCellModel?) {
         self.title.value = model?.title
         self.subtitle.value = model?.subtitle
-        self.imageUrl.value = model?.imageUrl
+        if let imageUrl = model?.imageUrl {
+            self.imageUrl.value = imageUrl
+        } else {
+            self.imageUrl.value = String()
+        }
     }
 }
