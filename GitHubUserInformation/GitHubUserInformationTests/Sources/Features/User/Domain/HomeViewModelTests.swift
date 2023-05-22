@@ -43,6 +43,20 @@ class HomeViewModelTests: BaseXCTest {
         wait(for: [expectation], timeout: 20)
     }
     
+    func test_return_error_user_list() {
+        let expectation = XCTestExpectation(description: "testing fetch with error parse")
+        makeSut(manager: HomeManagerErrorUserListMock())
+        sut?.status.bind(skip: true) { status in
+            if status == .error {
+                XCTAssertNil(self.sut?.model)
+                XCTAssertEqual(self.sut?.status.value, .error)
+                expectation.fulfill()
+            }
+        }
+        sut?.fetchUserList()
+        wait(for: [expectation], timeout: 20)
+    }
+    
     // MARK: - Private Methods
     
     private func makeSut(manager: HomeManagerProtocol?) {
@@ -58,5 +72,11 @@ private class HomeManagerSuccessUserListMock: HomeManagerProtocol {
     
     func fetchUserList(completion: @escaping UserListGetCompletion) {
         completion(.success(userList))
+    }
+}
+
+private class HomeManagerErrorUserListMock: HomeManagerProtocol {
+    func fetchUserList(completion: @escaping UserListGetCompletion) {
+        completion(.failure(BaseError.parse("Error Parse")))
     }
 }
