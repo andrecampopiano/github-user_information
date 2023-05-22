@@ -20,14 +20,6 @@ class GenericCell: UITableViewCell {
     private enum Constants {
         static let imageNameDefault: String = "image_default"
         static let imageViewSize: CGFloat = 70
-        static let imageViewPaddingLeft: CGFloat = 16
-        static let imageViewPaddingTop: CGFloat = 16
-        static let imageViewPaddingBottom: CGFloat = 16
-        static let titleLabelPaddingTop: CGFloat = 8
-        static let titleLabelPaddingLeft: CGFloat = 16
-        static let titleLabelPaddingRight: CGFloat = 16
-        static let subtitleLabelPaddingTop: CGFloat = 4
-        static let subtitleLabelPaddingBottom: CGFloat = 8
         static let avatarViewBoderWidth: CGFloat = 2
     }
     
@@ -109,11 +101,11 @@ class GenericCell: UITableViewCell {
         avatarView.anchor(width: Constants.imageViewSize,
                           height: Constants.imageViewSize)
         avatarView.anchor(left: safeLeftAnchor,
-                          paddingLeft: Constants.imageViewPaddingLeft)
+                          paddingLeft: .spacing(.small))
         avatarView.anchor(top: safeTopAnchor,
                           bottom: safeBottomAnchor,
-                          paddingTop: Constants.imageViewPaddingTop,
-                          paddingBottom: Constants.imageViewPaddingBottom)
+                          paddingTop: .spacing(.small),
+                          paddingBottom: .spacing(.small))
     }
     
     private func setupTitleLabel() {
@@ -121,17 +113,17 @@ class GenericCell: UITableViewCell {
         titleLabel.anchor(top: avatarView.safeTopAnchor)
         titleLabel.anchor(left: avatarView.safeRightAnchor,
                           right: safeRightAnchor,
-                          paddingLeft: Constants.titleLabelPaddingLeft,
-                          paddingRight: Constants.titleLabelPaddingRight)
+                          paddingLeft: .spacing(.small),
+                          paddingRight: .spacing(.small))
     }
     
     private func setupSubtitleLabel() {
         addSubview(subtitleLabel)
         subtitleLabel.anchor(top: titleLabel.safeBottomAnchor,
-                             paddingTop: Constants.subtitleLabelPaddingTop)
+                             paddingTop: .spacing(.nano))
         subtitleLabel.anchor(left: avatarView.safeRightAnchor,
                              right: safeRightAnchor,
-                             paddingLeft: Constants.titleLabelPaddingLeft,
-                             paddingRight: Constants.titleLabelPaddingRight)
+                             paddingLeft: .spacing(.small),
+                             paddingRight: .spacing(.small))
     }
 }

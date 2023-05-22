@@ -20,11 +20,7 @@ class GenericLoadingCell: UITableViewCell {
     private enum Constants {
         static let activityIndicatorScale: CGFloat = 1.25
         static let titleLabelPaddingTop: CGFloat = 100
-        static let titleLabelPaddingLeft: CGFloat = 24
-        static let titleLabelPaddingRight: CGFloat = 24
         static let activityIndicatorSize: CGFloat = 50
-        static let activityIndicatorPaddingTop: CGFloat = 24
-        static let descriptionLabelPaddingTop: CGFloat = 24
         static let titleText: String = LocalizableBundle.loadingViewTitle.localize
         static let descriptionText: String = LocalizableBundle.loadingViewSubtitle.localize
     }
@@ -86,19 +82,26 @@ class GenericLoadingCell: UITableViewCell {
     private func setupTitleLabelLayout() {
         addSubview(titleLabel)
         titleLabel.anchor(top: safeTopAnchor, paddingTop: Constants.titleLabelPaddingTop)
-        titleLabel.anchor(left: safeLeftAnchor, right: safeRightAnchor, paddingLeft: Constants.titleLabelPaddingLeft, paddingRight: Constants.titleLabelPaddingRight)
+        titleLabel.anchor(left: safeLeftAnchor,
+                          right: safeRightAnchor,
+                          paddingLeft: .spacing(.medium),
+                          paddingRight: .spacing(.medium))
     }
     
     private func setupActivityViewLayout() {
         addSubview(activityView)
-        activityView.anchor(top: titleLabel.safeBottomAnchor, paddingTop: Constants.activityIndicatorPaddingTop)
+        activityView.anchor(top: titleLabel.safeBottomAnchor, paddingTop: .spacing(.medium))
         activityView.anchor(width: Constants.activityIndicatorSize, height: Constants.activityIndicatorSize)
         activityView.anchor(horizontal: safeCenterXAnchor)
     }
     
     private func setupDescriptioLabelLayout() {
         addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: activityView.safeBottomAnchor, bottom: safeBottomAnchor, paddingTop: Constants.descriptionLabelPaddingTop, paddingBottom: Constants.descriptionLabelPaddingTop)
-        descriptionLabel.anchor(left: titleLabel.safeLeftAnchor, right: titleLabel.safeRightAnchor)
+        descriptionLabel.anchor(top: activityView.safeBottomAnchor,
+                                bottom: safeBottomAnchor,
+                                paddingTop: .spacing(.medium),
+                                paddingBottom: .spacing(.medium))
+        descriptionLabel.anchor(left: titleLabel.safeLeftAnchor,
+                                right: titleLabel.safeRightAnchor)
     }
 }
