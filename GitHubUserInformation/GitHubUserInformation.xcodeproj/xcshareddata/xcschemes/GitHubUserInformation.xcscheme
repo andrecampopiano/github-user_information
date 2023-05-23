@@ -73,6 +73,12 @@
                   Identifier = "GenericLoadingCellTests/test_snapshot_with_default_values()">
                </Test>
                <Test
+                  Identifier = "HomeManagerTests/test_fetch_user_list_with_parse_error()">
+               </Test>
+               <Test
+                  Identifier = "HomeManagerTests/test_fetch_user_list_with_success()">
+               </Test>
+               <Test
                   Identifier = "HomeViewControllerTests/test_snapshot_with_loading_view()">
                </Test>
                <Test
@@ -86,6 +92,9 @@
                </Test>
                <Test
                   Identifier = "HomeViewModelTests/test_retorn_succces_user_list()">
+               </Test>
+               <Test
+                  Identifier = "HomeViewModelTests/test_return_error_user_list()">
                </Test>
             </SelectedTests>
          </TestableReference>
