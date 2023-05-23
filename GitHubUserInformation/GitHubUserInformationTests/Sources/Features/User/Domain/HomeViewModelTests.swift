@@ -40,7 +40,7 @@ class HomeViewModelTests: BaseXCTest {
         }
         
         sut?.fetchUserList()
-        wait(for: [expectation], timeout: 20)
+        wait(for: [expectation], timeout: 10)
     }
     
     func test_return_error_user_list() {
@@ -53,8 +53,9 @@ class HomeViewModelTests: BaseXCTest {
                 expectation.fulfill()
             }
         }
+        
         sut?.fetchUserList()
-        wait(for: [expectation], timeout: 20)
+        wait(for: [expectation], timeout: 10)
     }
     
     // MARK: - Private Methods
@@ -66,9 +67,11 @@ class HomeViewModelTests: BaseXCTest {
 
 private class HomeManagerSuccessUserListMock: HomeManagerProtocol {
     
-    private let userList = [UserResponse(login: "loginMock01"),
-                            UserResponse(login: "loginMock02"),
-                            UserResponse(login: "loginMock03")]
+    private let userList = [
+        UserResponse(login: "loginMock01"),
+        UserResponse(login: "loginMock02"),
+        UserResponse(login: "loginMock03")
+    ]
     
     func fetchUserList(completion: @escaping UserListGetCompletion) {
         completion(.success(userList))
