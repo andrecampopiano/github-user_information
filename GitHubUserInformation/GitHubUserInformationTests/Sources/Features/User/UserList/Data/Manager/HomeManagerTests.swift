@@ -10,14 +10,20 @@ import XCTest
 
 class HomeManagerTests: BaseXCTest {
     
+    // MARK: - Properties
+    
     private var sut: HomeManager?
     private var provider: ApiProviderMock?
+    
+    // MARK: - Override Methods
     
     override func tearDown() {
         super.tearDown()
         sut = nil
         provider = nil
     }
+    
+    // MARK: - Tests Methods
     
     func test_fetch_user_list_with_success() {
         let expectation = XCTestExpectation()

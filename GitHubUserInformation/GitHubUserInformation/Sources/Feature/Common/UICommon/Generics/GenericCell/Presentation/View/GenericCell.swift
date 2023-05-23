@@ -11,6 +11,7 @@ enum GenericCellIdentifiers: String {
     case avatarView = "genericCell_avatarView_id"
     case titleLabel = "genericCell_titleLabel_id"
     case subtitleLabel = "genericCell_subtitleLabel_id"
+    case descriptionLabel = "genericCell_descriptionLabel_id"
 }
 
 class GenericCell: UITableViewCell {
@@ -55,6 +56,15 @@ class GenericCell: UITableViewCell {
         return label
     }()
     
+    private lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.font = UIFont(name: .condensedBold, size: .small)
+        label.textColor = .neutralDarkGrey
+        label.accessibilityIdentifier = GenericCellIdentifiers.descriptionLabel.rawValue
+        return label
+    }()
+    
     // MARK: - Instantiate
     
     static func instantiate() -> GenericCell {
@@ -91,6 +101,11 @@ class GenericCell: UITableViewCell {
             }
             self.avatarView.image = UIImage(named: Constants.imageNameDefault)
         }
+        
+        viewModel?.description.bind { [weak self] text in
+            guard let self = self else { return }
+            self.descriptionLabel.text = text
+        }
     }
     
     private func setupLayout() {
@@ -98,6 +113,7 @@ class GenericCell: UITableViewCell {
         setupImageViewLayout()
         setupTitleLabel()
         setupSubtitleLabel()
+        setupDescriptioLabelLayout()
     }
     
     private func setupImageViewLayout() {
@@ -129,5 +145,13 @@ class GenericCell: UITableViewCell {
                              right: safeRightAnchor,
                              paddingLeft: .spacing(.small),
                              paddingRight: .spacing(.small))
+    }
+    
+    private func setupDescriptioLabelLayout() {
+        addSubview(descriptionLabel)
+        descriptionLabel.anchor(top: subtitleLabel.safeBottomAnchor,
+                                paddingTop: .spacing(.nano))
+        descriptionLabel.anchor(left: titleLabel.safeLeftAnchor,
+                                right: titleLabel.safeRightAnchor)
     }
 }

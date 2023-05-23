@@ -98,15 +98,17 @@ class GenericCellTests: BaseXCTest, Elements {
 }
 
 private class MokeGenericCellViewModel: GenericCellViewModelProtocol {
-   
+    
     var title = Dynamic<String?>(nil)
     var subtitle = Dynamic<String?>(nil)
     var imageUrl = Dynamic<String?>(nil)
+    var description = Dynamic<String?>(nil)
     
     required init(model: GenericCellModel?) {
         title.value = model?.title
         subtitle.value = model?.subtitle
         imageUrl.value = model?.imageUrl
+        description.value = model?.description
     }
 }
  

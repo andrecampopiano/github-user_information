@@ -10,5 +10,6 @@ import Foundation
 protocol GenericCellViewModelProtocol {
     var title: Dynamic<String?> { get }
     var subtitle: Dynamic<String?> { get }
+    var description: Dynamic<String?> { get }
     var imageUrl: Dynamic<String?> { get }
 }

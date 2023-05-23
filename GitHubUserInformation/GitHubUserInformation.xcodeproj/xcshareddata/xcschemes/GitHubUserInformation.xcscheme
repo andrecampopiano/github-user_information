@@ -61,6 +61,18 @@
                   Identifier = "GenericErrorTests/test_snapshot_with_default_values()">
                </Test>
                <Test
+                  Identifier = "GenericItemCellTests/test_assets()">
+               </Test>
+               <Test
+                  Identifier = "GenericItemCellTests/test_snapshot_with_descriptio_medium_large()">
+               </Test>
+               <Test
+                  Identifier = "GenericItemCellTests/test_snapshot_with_descriptio_medium_text()">
+               </Test>
+               <Test
+                  Identifier = "GenericItemCellTests/test_snapshot_with_descriptio_small_text()">
+               </Test>
+               <Test
                   Identifier = "GenericLoadingCellTests/test_custom_values()">
                </Test>
                <Test
@@ -79,6 +91,9 @@
                   Identifier = "HomeManagerTests/test_fetch_user_list_with_success()">
                </Test>
                <Test
+                  Identifier = "HomeViewControllerTests/test_snapshot_with_error()">
+               </Test>
+               <Test
                   Identifier = "HomeViewControllerTests/test_snapshot_with_loading_view()">
                </Test>
                <Test
@@ -95,6 +110,9 @@
                </Test>
                <Test
                   Identifier = "HomeViewModelTests/test_return_error_user_list()">
+               </Test>
+               <Test
+                  Identifier = "UserDetailsManagerTests/test_fetch_user_details_with_success()">
                </Test>
             </SelectedTests>
          </TestableReference>

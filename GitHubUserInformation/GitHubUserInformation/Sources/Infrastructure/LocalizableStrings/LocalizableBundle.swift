@@ -26,6 +26,10 @@ enum LocalizableBundle: String {
     
     case tryAgainButton
     
+    // MARK: - User Details
+    
+    case userDetaisViewControllerNavigationTitle
+    
     var localize: String {
         return rawValue.localize(bundle: .main)
     }

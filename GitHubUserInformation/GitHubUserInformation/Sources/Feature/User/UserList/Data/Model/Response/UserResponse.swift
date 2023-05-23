@@ -10,8 +10,9 @@ import Foundation
 struct UserResponse: Decodable {
     
     enum CodingKeys: String, CodingKey {
-        case id, login, url, type
+        case id, login
         case avatarUrl = "avatar_url"
+         case url
         case htmlUrl = "html_url"
         case gravatarId = "gravatar_id"
         case followersUrl = "followers_url"
@@ -23,6 +24,7 @@ struct UserResponse: Decodable {
         case reposUrl = "repos_url"
         case eventsUrl = "events_url"
         case receivedEventsUrl = "received_events_url"
+        case type
         case siteAdmin = "site_admin"
         case name, company, blog, location, email, hireable, bio
         case twitterUsername = "twitter_username"
@@ -55,7 +57,7 @@ struct UserResponse: Decodable {
     var blog: String?
     var location: String?
     var email: String?
-    var hireable: String?
+    var hireable: Bool?
     var bio: String?
     var twitterUsername: String?
     var publicRepos: Int?

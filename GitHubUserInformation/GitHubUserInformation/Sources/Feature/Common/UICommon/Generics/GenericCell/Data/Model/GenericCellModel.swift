@@ -11,4 +11,5 @@ struct GenericCellModel {
     var title: String?
     var subtitle: String?
     var imageUrl: String?
+    var description: String?
 }

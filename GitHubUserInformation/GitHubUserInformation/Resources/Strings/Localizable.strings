@@ -20,3 +20,6 @@
 
 // MARK: - Generic Texts
 "tryAgainButton" = "Tentar Novamente";
+
+// MARK: - User Details
+"userDetaisViewControllerNavigationTitle" = "Detalhes do Usuário";
