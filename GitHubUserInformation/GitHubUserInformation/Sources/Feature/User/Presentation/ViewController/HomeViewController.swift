@@ -23,6 +23,7 @@ final class HomeViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.registerCell(GenericCell.self)
         tableView.registerCell(GenericLoadingCell.self)
+        tableView.registerCell(GenericErrorCell.self)
         tableView.accessibilityIdentifier = HomeViewControllerIdentifiers.tableView.rawValue
         return tableView
     }()
@@ -86,15 +87,14 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch viewModel?.status.value {
+        guard let status = viewModel?.status.value else { return UITableViewCell() }
+        switch status {
         case .error:
-            return UITableViewCell()
+            return setupGenericErrorCell(tableView, cellForRowAt: indexPath)
         case .loading:
             return setupGenericLoadingCell(tableView, cellForRowAt: indexPath)
         case .loaded:
             return setupGenericCell(tableView, cellForRowAt: indexPath)
-        default:
-            return UITableViewCell()
         }
     }
     
@@ -110,5 +110,18 @@ extension HomeViewController: UITableViewDataSource {
         let viewModel = GenericCellViewModel(model: GenericCellModel(title: model?.login, subtitle: model?.htmlUrl, imageUrl: model?.avatarUrl))
         cell.setup(viewModel: viewModel)
         return cell
+    }
+    
+    private func setupGenericErrorCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> GenericErrorCell {
+        let cell = tableView.dequeueReusableCell(GenericErrorCell.self, for: indexPath)
+        cell.setup(delegate: self)
+        return cell
+    }
+}
+
+// MARK: - GenericErrorCellDelegate
+extension HomeViewController: GenericErrorCellDelegate {
+    func tryAgain() {
+        viewModel?.fetchUserList()
     }
 }

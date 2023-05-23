@@ -72,6 +72,7 @@ class GenericErrorCell: UITableViewCell {
         button.setTitle(Constants.primaryButtonDefaultText, for: .normal)
         button.accessibilityIdentifier = GenericErrorCellIdentifiers.tryAgainButton.rawValue
         button.cornerRadius = .size(.nano)
+        button.addTarget(self, action: #selector(tryAgain), for: .touchUpInside)
         return button
     }()
     
@@ -119,7 +120,7 @@ class GenericErrorCell: UITableViewCell {
     }
     
     private func setupTitleLabelLayout() {
-        self.contentView.addSubview(titleLabel)
+        addSubview(titleLabel)
         titleLabel.anchor(top: safeTopAnchor,
                           paddingTop: Constants.titleLabelPaddingTop)
         titleLabel.anchor(left: safeLeftAnchor,
@@ -129,7 +130,7 @@ class GenericErrorCell: UITableViewCell {
     }
     
     private func setupMainImageViewLayout() {
-        self.contentView.addSubview(mainImageView)
+        addSubview(mainImageView)
         mainImageView.anchor(top: titleLabel.safeBottomAnchor,
                              paddingTop: .spacing(.medium))
         mainImageView.anchor(width: .size(.big),
@@ -138,7 +139,7 @@ class GenericErrorCell: UITableViewCell {
     }
     
     private func setupDescriptioLabelLayout() {
-        self.contentView.addSubview(descriptionLabel)
+        addSubview(descriptionLabel)
         descriptionLabel.anchor(top: mainImageView.safeBottomAnchor,
                                 paddingTop: .spacing(.medium))
         descriptionLabel.anchor(left: titleLabel.safeLeftAnchor,
@@ -146,7 +147,7 @@ class GenericErrorCell: UITableViewCell {
     }
     
     private func setupTryAgainButtonLayout() {
-        self.contentView.addSubview(primaryButton)
+        addSubview(primaryButton)
         primaryButton.anchor(top: descriptionLabel.safeBottomAnchor,
                              bottom: safeBottomAnchor,
                              paddingTop: .spacing(.medium),
@@ -156,5 +157,10 @@ class GenericErrorCell: UITableViewCell {
                              right: safeRightAnchor,
                              paddingLeft: .spacing(.big),
                              paddingRight: .spacing(.big))
+    }
+    
+    @objc
+    private func tryAgain() {
+        delegate?.tryAgain()
     }
 }

@@ -68,6 +68,16 @@ class HomeViewControllerTests: BaseXCTest, Elements {
         }
     }
     
+    func test_snapshot_with_error() {
+        makeSut()
+        guard let sut = sut else { return }
+        viewModel?.status.value = .error
+        recordMode = true
+        verifySnapshotView(delay: 2) {
+            sut.view
+        }
+    }
+    
     // MARK: Private Methods
     
     private func makeSut(fileName: String? = nil) {
