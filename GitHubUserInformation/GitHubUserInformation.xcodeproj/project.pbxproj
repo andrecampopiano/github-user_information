@@ -1159,6 +1159,7 @@
 			isa = PBXGroup;
 			children = (
 				94FAB4262A1CAFAE00C564B9 /* Data */,
+				94FAB42A2A1CB27D00C564B9 /* Domain */,
 			);
 			path = UserDetails;
 			sourceTree = "<group>";
@@ -1166,7 +1167,6 @@
 		94FAB4262A1CAFAE00C564B9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				94FAB4272A1CAFBA00C564B9 /* Business */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1177,6 +1177,14 @@
 				94FAB4282A1CAFF100C564B9 /* UserDetailsBusiness.swift */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		94FAB42A2A1CB27D00C564B9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				94FAB4272A1CAFBA00C564B9 /* Business */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		F658287E5E5D6928D8C07EC8 /* Frameworks */ = {
