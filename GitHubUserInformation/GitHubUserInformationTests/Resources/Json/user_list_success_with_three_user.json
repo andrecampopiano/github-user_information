@@ -2,7 +2,6 @@
     {
        "login":"mojombo",
        "id":1,
-       "node_id":"MDQ6VXNlcjE=",
        "gravatar_id":"",
        "url":"https://api.github.com/users/mojombo",
        "html_url":"https://github.com/mojombo",
@@ -21,7 +20,6 @@
     {
        "login":"defunkt",
        "id":2,
-       "node_id":"MDQ6VXNlcjI=",
        "avatar_url":"",
        "gravatar_id":"",
        "url":"https://api.github.com/users/defunkt",
@@ -41,7 +39,6 @@
     {
        "login":"pjhyett",
        "id":3,
-       "node_id":"MDQ6VXNlcjM=",
        "gravatar_id":"",
        "url":"https://api.github.com/users/pjhyett",
        "html_url":"https://github.com/pjhyett",
