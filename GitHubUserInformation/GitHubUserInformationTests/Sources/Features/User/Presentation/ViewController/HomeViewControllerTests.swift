@@ -72,7 +72,6 @@ class HomeViewControllerTests: BaseXCTest, Elements {
         makeSut()
         guard let sut = sut else { return }
         viewModel?.status.value = .error
-        recordMode = true
         verifySnapshotView(delay: 2) {
             sut.view
         }
