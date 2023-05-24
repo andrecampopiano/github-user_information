@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "coreswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/andrecampopiano/CoreSwift",
+      "state" : {
+        "revision" : "60e03895a7373c299a603226b966c510bed3a9c8",
+        "version" : "1.0.5"
+      }
+    }
+  ],
+  "version" : 2
+}

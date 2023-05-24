@@ -1,0 +1,28 @@
+PODS:
+  - iOSSnapshotTestCase (8.0.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 8.0.0)
+  - iOSSnapshotTestCase/Core (8.0.0)
+  - iOSSnapshotTestCase/SwiftSupport (8.0.0):
+    - iOSSnapshotTestCase/Core
+  - ReachabilitySwift (5.0.0)
+  - SwiftLint (0.52.2)
+
+DEPENDENCIES:
+  - iOSSnapshotTestCase
+  - ReachabilitySwift
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - iOSSnapshotTestCase
+    - ReachabilitySwift
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SwiftLint: 1ac76dac888ca05cb0cf24d0c85887ec1209961d
+
+PODFILE CHECKSUM: f31196a33831e02749548d8d9b082c8b0cc7cfee
+
+COCOAPODS: 1.12.0
