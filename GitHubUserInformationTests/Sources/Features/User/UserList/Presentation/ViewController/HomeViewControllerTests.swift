@@ -5,6 +5,7 @@
 //  Created by Andre Luis Campopiano on 21/05/23.
 //
 
+import CoreSwift
 @testable import GitHubUserInformation
 import XCTest
 
@@ -33,7 +34,7 @@ class HomeViewControllerTests: BaseXCTest, Elements {
         viewModel = nil
     }
     
-    // MARK: Tests Methods
+    // MARK: - Tests Methods
     
     func test_snapshot_with_loading_view() {
         makeSut()
@@ -77,7 +78,7 @@ class HomeViewControllerTests: BaseXCTest, Elements {
         }
     }
     
-    // MARK: Private Methods
+    // MARK: - Private Methods
     
     private func makeSut(fileName: String? = nil) {
         viewModel = setupViewModel(fileName: fileName)

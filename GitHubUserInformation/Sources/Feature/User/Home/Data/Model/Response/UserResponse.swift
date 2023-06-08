@@ -12,9 +12,9 @@ struct UserResponse: Decodable {
     enum CodingKeys: String, CodingKey {
         case id, login
         case avatarUrl = "avatar_url"
-         case url
-        case htmlUrl = "html_url"
         case gravatarId = "gravatar_id"
+        case url
+        case htmlUrl = "html_url"
         case followersUrl = "followers_url"
         case followingUrl = "following_url"
         case gistsUrl = "gists_url"

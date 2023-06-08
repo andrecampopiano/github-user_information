@@ -5,6 +5,7 @@
 //  Created by Andre Luis Campopiano on 21/05/23.
 //
 
+import CoreSwift
 @testable import GitHubUserInformation
 import XCTest
 

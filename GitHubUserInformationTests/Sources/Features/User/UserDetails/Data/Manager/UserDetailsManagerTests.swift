@@ -5,6 +5,7 @@
 //  Created by Andre Luis Campopiano on 23/05/23.
 //
 
+import CoreSwift
 @testable import GitHubUserInformation
 import XCTest
 
@@ -37,7 +38,7 @@ class UserDetailsManagerTests: BaseXCTest {
                 XCTFail(error.localizedDescription)
             }
         }
-        wait(for: [expectetion], timeout: 2)
+        wait(for: [expectetion], timeout: 1)
     }
     
     // MARK: - Private Methods
@@ -46,7 +47,7 @@ class UserDetailsManagerTests: BaseXCTest {
         XCTAssertNotNil(model)
         
         XCTAssertEqual(model.login, "andrecampopiano")
-        XCTAssertEqual(model.id, 8277291)
+        XCTAssertEqual(model.id, 20)
         XCTAssertEqual(model.gravatarId, String())
         XCTAssertEqual(model.url, "https://api.github.com/users/andrecampopiano")
         XCTAssertEqual(model.htmlUrl, "https://github.com/andrecampopiano")
