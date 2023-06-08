@@ -90,6 +90,6 @@ fastlane/test_output
 iOSInjectionProject/
 
 #Snapshot Tests
-GitHubUserInformation/GitHubUserInformationTests/Snapshots/FailureDiffs
+GitHubUserInformationTests/Snapshots/FailureDiffs
 
 
