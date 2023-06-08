@@ -8,7 +8,6 @@
 # Pods
 def external_libs
   pod 'SwiftLint'
-  pod 'ReachabilitySwift'
 end
 
 def module_common
@@ -17,6 +16,7 @@ end
 
 def module_pods
   module_common
+#  setup(mod:'CoreSwift', path:"/core-swift", branch: 'main', local: true)
 end
 
 def test_libs
